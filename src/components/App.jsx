@@ -1,4 +1,15 @@
+import * as React from 'react';
+import {Profile} from './profile/Profile'
+import userProfile from '../data/user.json'
+import {Statistics} from './statistics/Statistics';
+import userStatistics from '../data/data.json'
+
 export const App = () => {
+
+  React.useEffect(() => {
+    console.log('RENDER');
+  }, []);
+
   return (
     <div
       style={{
@@ -10,7 +21,15 @@ export const App = () => {
         color: '#010101'
       }}
     >
-      React homework template
+     <Profile 
+     username={userProfile.username}
+     tag={userProfile.tag}
+     location={userProfile.location}
+     avatar={userProfile.avatar}
+     stats={userProfile.stats}
+     />
+     <Statistics title="Upload stats" stats={userStatistics} />
+     
     </div>
   );
 };
