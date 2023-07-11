@@ -5,7 +5,6 @@ import {Statistics} from './statistics/Statistics';
 import userStatistics from '../data/data.json'
 import { FriendList } from './friendList/FriendList';
 import userFriendList from '../data/friends.json'
-import {FriendsListItem} from './friendsListItem/FriendsListItem'
 import userFriendsListItem from '../data/friends.json'
 
 

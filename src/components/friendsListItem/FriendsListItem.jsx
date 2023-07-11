@@ -1,6 +1,6 @@
 import React from "react";
 
-export const FriendList = (props) =>{
+export const FriendListItem = (props) =>{
     return (
         <li class="item">
         <span class="status"></span>
