@@ -6,6 +6,8 @@ import userStatistics from '../data/data.json'
 import { FriendList } from './friendList/FriendList';
 import userFriendList from '../data/friends.json'
 import userFriendsListItem from '../data/friends.json'
+import {TransactionHistory} from './transactionHistory/TransactionHistory'
+// import userTransactionHistory from '../data/transaction.json'
 
 
 export const App = () => {
