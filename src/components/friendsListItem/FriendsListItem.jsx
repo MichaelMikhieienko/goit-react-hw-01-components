@@ -1,6 +1,7 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-export const FriendListItem = props => {
+export const FriendListItem = (props) => {
   return (
     <li className="item">
       <span className="status">{props.isOnline ? 'Yes' : 'No'}</span>
@@ -10,28 +11,10 @@ export const FriendListItem = props => {
   );
 };
 
-// export const Statistics = props => {
-//   return (
-//     <section class="statistics">
-//       <h2 class="title">{props.title}</h2>
+FriendListItem.propTypes = {
+  isOnline: PropTypes.bool.isRequired,
+  avatar: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+};
 
-//       <ul class="stat-list">
-//         {props.stats.map(item => {
-//           return (
-//             <StatItem key={item.id} label={item.label} percentage={item.percentage} />
-//            );
-//         })}
-//       </ul>
-//     </section>
-//   );
-// };
 
-// const StatItem = (props) => {
-
-//   return (
-//     <li class="item">
-//               <span class="label">{props.label}</span>
-//               <span class="percentage">{props.percentage}</span>
-//             </li>
-//   )
-// }
