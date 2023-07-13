@@ -39,11 +39,11 @@ export const App = () => {
       <Statistics title="Upload stats" stats={userStatistics} />
       </section>
 
-      <section class sectionFriendList>
+      <section className sectionfriendlist>
       <FriendList friends={userFriendList} />
       </section>
 
-      <section class sectionTransactionHistory>
+      <section className sectiontransactionhistory>
       <TransactionHistory items={userTransactionHistory} />
       </section>
       
