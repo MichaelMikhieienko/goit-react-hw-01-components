@@ -1,8 +1,7 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react';
+import PropTypes from 'prop-types';
 
-export const Profile = (props) => {
-  console.log(props.stats);
+export const Profile = props => {
   return (
     <div className="profile">
       <div className="description">

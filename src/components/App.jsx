@@ -7,13 +7,9 @@ import { FriendList } from './FriendList/FriendList';
 import userFriendList from '../data/friends.json';
 import { TransactionHistory } from './TransactionHistory/TransactionHistory';
 import userTransactionHistory from '../data/transactions.json';
-import './app.css'
+import './app.css';
 
 export const App = () => {
-  React.useEffect(() => {
-    console.log('RENDER');
-  }, []);
-
   return (
     <div
       style={{
@@ -25,7 +21,7 @@ export const App = () => {
         color: '#010101',
       }}
     >
-      <section className='sectionProfile'>
+      <section className="sectionProfile">
         <Profile
           username={userProfile.username}
           tag={userProfile.tag}
@@ -35,20 +31,17 @@ export const App = () => {
         />
       </section>
 
-      <section className='sectionStatistics' >
-      <Statistics title="Upload stats" stats={userStatistics} />
+      <section className="sectionStatistics">
+        <Statistics title="Upload stats" stats={userStatistics} />
       </section>
 
-      <section className sectionfriendlist>
-      <FriendList friends={userFriendList} />
+      <section className="sectionfriendlist">
+        <FriendList friends={userFriendList} />
       </section>
 
-      <section className sectiontransactionhistory>
-      <TransactionHistory items={userTransactionHistory} />
+      <section className="sectiontransactionhistory">
+        <TransactionHistory items={userTransactionHistory} />
       </section>
-      
-      
-      
     </div>
   );
 };
