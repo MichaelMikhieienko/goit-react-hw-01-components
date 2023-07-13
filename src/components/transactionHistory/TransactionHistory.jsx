@@ -1,6 +1,7 @@
 import React from 'react';
+import PropTypes from "prop-types";
 
-export const TransactionHistory = props => {
+export const TransactionHistory = (props) => {
   return (
     <table className="transaction-history">
       <thead>
@@ -12,7 +13,7 @@ export const TransactionHistory = props => {
       </thead>
 
       <tbody>
-        {props.items.map(item => {
+        {props.items.map((item) => {
           return (
             <TransactionHistoryRow
               key={item.id}
@@ -27,14 +28,29 @@ export const TransactionHistory = props => {
   );
 };
 
+TransactionHistory.propTypes = {
+  items: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      type: PropTypes.string.isRequired,
+      amount: PropTypes.number.isRequired,
+      currency: PropTypes.string.isRequired,
+    })
+  ).isRequired,
+};
 
-
-const TransactionHistoryRow = props => {
+const TransactionHistoryRow = (props) => {
   return (
     <tr>
       <td>{props.type}</td>
-      <td>{props.type}</td>
+      <td>{props.amount}</td>
       <td>{props.currency}</td>
     </tr>
   );
+};
+
+TransactionHistoryRow.propTypes = {
+  type: PropTypes.string.isRequired,
+  amount: PropTypes.number.isRequired,
+  currency: PropTypes.string.isRequired,
 };
