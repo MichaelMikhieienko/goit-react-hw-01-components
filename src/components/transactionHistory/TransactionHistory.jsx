@@ -54,3 +54,5 @@ TransactionHistoryRow.propTypes = {
   amount: PropTypes.number.isRequired,
   currency: PropTypes.string.isRequired,
 };
+
+11
